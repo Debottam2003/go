@@ -79,7 +79,8 @@ func main() {
 		for j := 1; j <= i; j++ {
 			fmt.Print("*")
 		}
-		fmt.Println()
+		// fmt.Println("") 
+		fmt.Print("\n")
 	}
 	var index uint16 = 0
 	for {
@@ -94,4 +95,5 @@ func main() {
 		fmt.Println(iterator)
 		iterator++
 	}
+	fmt.Println("This is a new line... \nThis is a new line...")
 }
