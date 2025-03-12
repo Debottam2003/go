@@ -72,7 +72,7 @@ func main() {
 	// 	}
 	// }
 	// fmt.Println(matrix)
-	fmt.Print("Debottam Kar's nick name is")
+	fmt.Print("Debottam Kar's nick name is ")
 	fmt.Println("Rony")
 	// * pattern
 	for i := 1; i <= 5; i++ {
@@ -80,5 +80,18 @@ func main() {
 			fmt.Print("*")
 		}
 		fmt.Println()
+	}
+	var index uint16 = 0
+	for {
+		fmt.Println("i am a loop in go...");
+		if index > 10{
+			break
+		}
+		index++
+	}
+	iterator := 1
+	for iterator < 10 {
+		fmt.Println(iterator)
+		iterator++
 	}
 }
