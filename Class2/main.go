@@ -95,5 +95,33 @@ func main() {
 		fmt.Println(iterator)
 		iterator++
 	}
+	var sgpa float32 = 8.341
+	var cgpa float32 = 8.145
 	fmt.Println("This is a new line... \nThis is a new line...")
+	fmt.Println("memory location of sgpa is ", &sgpa);
+    fmt.Println("memory location of cgpa is ", &cgpa);
+	var ptr *float32 = &sgpa
+	*ptr = 8.345
+	fmt.Println(sgpa)
+	a := 5
+	b := 10
+	fmt.Println(a, b)
+	swap_value(a, b)
+	fmt.Println("Call by value: ", a, b)
+	swap_reference(&a, &b)
+	fmt.Println("Call by reference", a, b)	
+}
+
+func swap_reference(a *int, b *int){
+	temp := *a
+	*a = *b
+	*b = temp
+	fmt.Println(*a, *b)
+}
+
+func swap_value(a int, b int){
+	temp := a
+	a = b
+    b = temp
+	fmt.Println(a, b)
 }
