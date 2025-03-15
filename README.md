@@ -1,4 +1,4 @@
-<h1>This is first small project</h1>
+<h1>This is the first small project</h1>
 _package main
 
 import (
