@@ -10,7 +10,7 @@ import (
 
 func main() {
 	fmt.Println("<<<TODO LIST>>>")
-	var todo []string
+	var todo []string = []string{}
 	var n int
 	scanner := bufio.NewScanner(os.Stdin)
 
