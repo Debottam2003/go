@@ -9,6 +9,7 @@ type userProfile struct {
     name string
     age int
 }
+// The user here is the receiver variable, representing the instance of userProfile on which the method is called.
 func (user userProfile) Display(id string) string{
     return user.name + " " + fmt.Sprintf("%d", user.age) + " " + "id: " + id
 }
