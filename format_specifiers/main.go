@@ -21,4 +21,8 @@ func main() {
 	fmt.Printf("%c\n", char1)
 	fmt.Printf("%d\n", char2)
 	fmt.Printf("%v\n", arr) 
+
+	// var res string = fmt.Sprintf("%d %f %s %t %v %c %d %v", a, b, name, log, c, char1, char2, arr)
+	res := "hello world" // warlus operator
+	fmt.Println(res)
 }

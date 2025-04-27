@@ -43,7 +43,7 @@ func main() {
 	var char1 rune = 'A'
 	var char2 rune = '界'
 	var char3 rune = 'অ'
-	var char4 rune = '🙂'
+	char4 := '🙂' // warlus operator
 	fmt.Println("These are runes:", char1, char2, char3, char4)
 
 	// Byte type (Alias for uint8)
