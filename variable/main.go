@@ -46,6 +46,10 @@ func main() {
 	var char4 rune = '🙂'
 	fmt.Println("These are runes:", char1, char2, char3, char4)
 
+	// Byte type (Alias for uint8)
+	var char5 byte = 'A'
+	fmt.Println("This is a byte:", char5)
+
 	// Complex types
 	var m complex64 = 1 + 2i
 	var n complex128 = 3 + 2i
