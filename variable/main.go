@@ -106,4 +106,8 @@ func main() {
 	// Strcut type
 	var user1 = userProfile{Name: "Debottam", Age: 22, Email: "debottamkar2003@gmail.com", Address: "Kolkata-India-743165", Phone: 9073584850}
 	fmt.Println("This is a structure:", user1)
+
+	// Constant type
+	const pi float32 = 3.14
+	fmt.Println("This is a constant:", pi)
 }

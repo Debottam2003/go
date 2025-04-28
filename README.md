@@ -181,3 +181,14 @@ Choose an option: 5
 Choose an option: 4
 👋 Exiting... Bye!
 _
+
+Variables data types 
+Conditional 
+Loops
+Function 
+Pointer 
+Network
+Data structure (Array Slice Structure Map)
+Go routine 
+Channels 
+File Handling
