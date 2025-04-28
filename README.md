@@ -182,13 +182,13 @@ Choose an option: 4
 👋 Exiting... Bye!
 _
 
-# Variables data types 
-# Conditional 
-# Loops
+# Variables data types ✅
+# Conditional ✅
+# Loops ✅
 # Function 
-# Pointer 
+# Pointer ✅
+# Data structure (Array, Slice, Structure, Map) ✅
+# File Handling
 # Network
-# Data structure (Array, Slice, Structure, Map)
 # Go routine 
 # Channels 
-# File Handling
