@@ -189,6 +189,7 @@ _
 # Pointer ✅
 # Data Structure (Array, Slice, Structure, Map) ✅
 # User Input
+# Error Handling
 # File Handling
 # Network
 # Go Routine 
