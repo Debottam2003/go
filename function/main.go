@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+func yoyo() {
+	fmt.Println("Defer function executed")
+}
+
 func add1(x, y int) {
 	fmt.Println("Sum:", x+y)
 }
@@ -37,6 +41,7 @@ func returnFunction() func(int) string {
 
 func main() { // Entry point of the program
 	fmt.Println("Hello, World!")
+	defer yoyo() // Defer function to be executed at the end of main
 	add1(2, 7)
 	add2(5.0, 3.0)
 	var x int = 5

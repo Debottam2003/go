@@ -188,7 +188,7 @@ _
 # Function ✅
 # Pointer ✅
 # Data Structure (Array, Slice, Structure, Map) ✅
-# User Input
+# User Input ✅
 # Error Handling
 # File Handling
 # Network
