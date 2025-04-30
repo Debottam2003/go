@@ -39,6 +39,17 @@ func returnFunction() func(int) string {
 	}
 }
 
+func safeDivision(a, b int) int {
+	defer func() {
+		r := recover()
+		if r != nil {
+			fmt.Println("Recovered from panic:", r)
+			fmt.Printf("%T\n", r)
+		}
+	}()
+	return a / b // If b is 0, it will panic
+}
+
 func main() { // Entry point of the program
 	fmt.Println("Hello, World!")
 	defer yoyo() // Defer function to be executed at the end of main
@@ -66,4 +77,18 @@ func main() { // Entry point of the program
 	var rn func(int) string = returnFunction()
 	// rn := returnFucntion()
 	fmt.Println(rn(10))
+
+	safeDivision(10, 0)
+
+	// An anonymous function is a function without a name. You can:
+	// a := func() { ... }	Anonymous function assigned to a variable
+	// func() { ... }()	Anonymous function immediately called
+
+	anonymous := func() {
+		fmt.Println("Anonymous function executed")
+	}
+	anonymous()
+	func() {
+		fmt.Println(("yo yo"))
+	}()
 }
