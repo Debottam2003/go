@@ -29,6 +29,7 @@ func main() {
 	res, err := safeDivide(10, 0)
 	if err != nil {
 		fmt.Println("Error:", err)
+		// pointer to an error interface
 		fmt.Printf("Error type: %T\n", err)
 	} else {
 		fmt.Println("result of the division:", res)
