@@ -12,6 +12,15 @@ type Bmw struct {
 	color string
 }
 
+type rect struct {
+	width float32;
+	height float32;
+}
+
+func (rectange rect) area() float32 {
+	return rectange.width * rectange.height
+}
+
 func main() {
 	fmt.Println("Hello, World!")
 	// anonymous struct
@@ -33,4 +42,11 @@ func main() {
 	var mycar Bmw = Bmw{Car: Car{brand: "BMW", model: "x5", year: 2023}, color: "black"}
 	fmt.Println(mycar.brand, mycar.model, mycar.year, mycar.color)
 	fmt.Println(mycar)
+	var r1 rect = rect{width: 10, height: 10}
+	fmt.Println(r1.area())
+	fmt.Println(r1.width, r1.height)
+	var r2 rect = rect{width: 20, height: 20}
+	fmt.Println(r2.area())
+	fmt.Println(r2.width, r2.height)
+	inf()
 }
