@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Car struct {
 	brand string
@@ -13,12 +15,25 @@ type Bmw struct {
 }
 
 type rect struct {
-	width float32;
-	height float32;
+	width  float32
+	height float32
 }
 
 func (rectange rect) area() float32 {
 	return rectange.width * rectange.height
+}
+
+type Address struct {
+	city    string
+	state   string
+	country string
+	zip    uint64
+}
+
+type userProfile struct {
+	name    string
+	age     uint8
+	address Address
 }
 
 func main() {
@@ -49,4 +64,15 @@ func main() {
 	fmt.Println(r2.area())
 	fmt.Println(r2.width, r2.height)
 	inf()
+	user1 := userProfile{
+		name: "deb kar",
+		age: 22,
+		address: Address{
+			city: "kolkata",
+			state: "west bengal",
+			country: "india",
+			zip: 700001,
+		},
+	}
+	fmt.Println(user1)
 }
