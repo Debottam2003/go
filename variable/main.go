@@ -128,7 +128,11 @@ func main() {
 	matrix[1][1] = 10
 	fmt.Println(matrix)
 
-	// sl := []int32{}
-	sl := make([]int32, 2, 5)
-	fmt.Println(sl, len(sl), cap(sl))
+	sl1 := []int32{1, 2, 3}
+	// sl := make([]int32, 2, 5)
+	// fmt.Println(sl, len(sl), cap(sl))
+	// sl2 := make([]int32, len(sl1))
+	// copy(sl2, sl1)
+	sl2 := sl1[:]
+	fmt.Println(sl2)
 }
