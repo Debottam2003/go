@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// x := 10
@@ -14,7 +16,7 @@ func main() {
 	}
 
 	// switch statement
-	switch x := 5; x {
+	switch x := 6; x {
 	case 1:
 		fmt.Println("x is 1")
 	case 2:
@@ -23,8 +25,11 @@ func main() {
 		fmt.Println("x is 3")
 	case 4:
 		fmt.Println("x is 4")
-	case 5:
+	case 5:	
 		fmt.Println("x is 5")
+	case 6:
+		// os.Exit(0)
+		break
 	default:
 		fmt.Println("x is greater than 5")
 	}
