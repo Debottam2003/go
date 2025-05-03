@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"maps"
 	"slices"
 )
 
@@ -83,6 +84,21 @@ func main() {
 	fmt.Println(student)
 	delete(student, "kar")
 	fmt.Println("This is a Map:", student)
+	m1 := make(map[string]string)
+	m1["name"] = "deb kar"
+	m1["address"] = "naihati"
+	fmt.Println(m1, len(m1))
+
+	val, ok := m1["name"]
+	if ok {
+		fmt.Println(val)
+	} else {
+		fmt.Println("No such key.")
+	}
+
+	m2 := m1
+	fmt.Println(m2)
+	fmt.Println(maps.Equal(m1, m2))
 
 	Fruits := []string{"apple", "banana", "orange", "grape"}
 	// Removing the element at index 1 (banana)
