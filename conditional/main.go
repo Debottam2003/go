@@ -19,13 +19,14 @@ func main() {
 	switch x := 6; x {
 	case 1:
 		fmt.Println("x is 1")
+		// break // no need go compiler under the hood done this
 	case 2:
 		fmt.Println("x is 2")
 	case 3:
 		fmt.Println("x is 3")
 	case 4:
 		fmt.Println("x is 4")
-	case 5:	
+	case 5:
 		fmt.Println("x is 5")
 	case 6:
 		// os.Exit(0)
