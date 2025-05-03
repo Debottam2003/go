@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"slices"
 )
 
 func Hello() {
@@ -118,13 +119,13 @@ func main() {
 
 	// constant grouping
 	const (
-		port int32 = 5000
-		host string = "localhost" 
+		port int32  = 5000
+		host string = "localhost"
 	)
-	fmt.Println("PORT:" ,port, "HOST:", host)
+	fmt.Println("PORT:", port, "HOST:", host)
 
 	// 2d array
-	matrix := [2][2]int{{2,3},{4,1}}
+	matrix := [2][2]int{{2, 3}, {4, 1}}
 	matrix[1][1] = 10
 	fmt.Println(matrix)
 
@@ -135,4 +136,5 @@ func main() {
 	// copy(sl2, sl1)
 	sl2 := sl1[:]
 	fmt.Println(sl2)
+	fmt.Println(slices.Equal(sl1, sl2))
 }
