@@ -8,6 +8,7 @@ import (
 func main() {
 	// x := 10
 	// if-else if-else statement
+	// logical operations &&, ||, !
 	if x := 10; x > 15 || x > 100 {
 		fmt.Println("x is greater than 15")
 	} else if x > 5 && x <= 15 {
@@ -15,6 +16,8 @@ func main() {
 	} else {
 		fmt.Println("x is less than or equal to 5")
 	}
+	var loggedin bool = true
+	fmt.Println("User logged in:", !loggedin)
 
 	// switch statement
 	switch x := 6; x {
@@ -37,7 +40,6 @@ func main() {
 	}
 
 	// multiple condition switch case
-	fmt.Println("Current time:", time.Now(), time.Saturday)
 	switch time.Now().Weekday() {
 	case time.Saturday, time.Sunday:
 		fmt.Println("This is weekend.")
@@ -62,6 +64,18 @@ func main() {
 	}
 	test(true)
 
-	var loggedin bool = true
-	fmt.Println("User logged in:", !loggedin)
+	// Time package features
+	t1 := time.Now()
+	fmt.Println("Current time:", t1)
+	fmt.Println("Current Year:", t1.Year())
+	fmt.Println("Current Month:", t1.Month())
+	fmt.Println("Current Day:", t1.Day())
+	fmt.Println("Current Hour:", t1.Hour())
+	fmt.Println("Current Minute:", t1.Minute())
+	fmt.Println("Current Second:", t1.Second())
+	fmt.Println("Unix Timestamp:", t1.Unix())
+	fmt.Println("Formatted Time:", t1.Format("2006-01-02 15:04:05"))
+	// fmt.Println("Is it before now?:", t1.Before(time.Now().Add(1*time.Hour)))
+	// fmt.Println("Is it after now?:", t1.After(time.Now().Add(-1*time.Hour)))
+
 }
