@@ -28,6 +28,10 @@ func errorHandling() (string, string) {
 	}
 }
 
+func test() (int32, string) {
+	return 5, "deb"
+}
+
 func callback(fn func(int) (string, string)) {
 	fmt.Println(fn(5))
 }
@@ -91,4 +95,11 @@ func main() { // Entry point of the program
 	func() {
 		fmt.Println(("yo yo"))
 	}()
+	var score int32
+	var name string
+	score, name = test()
+	fmt.Println(score, name)
+	var age, marks int16 = 10, 15
+	age, marks = marks, age
+	fmt.Println(age, marks)
 }

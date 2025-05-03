@@ -110,4 +110,17 @@ func main() {
 	// Constant type
 	const pi float32 = 3.14
 	fmt.Println("This is a constant:", pi)
+
+	// Multiple assignment and swap
+	var ageNew, marksNew int16 = 10, 15
+	ageNew, marksNew = marksNew, ageNew
+	fmt.Println(ageNew, marksNew)
+
+	// constant grouping
+	const (
+		port int32 = 5000
+		host string = "localhost" 
+	)
+	fmt.Println("PORT:" ,port, "HOST:", host)
+
 }
