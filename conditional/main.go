@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -34,6 +35,32 @@ func main() {
 	default:
 		fmt.Println("x is greater than 5")
 	}
+
+	// multiple condition switch case
+	fmt.Println("Current time:", time.Now(), time.Saturday)
+	switch time.Now().Weekday() {
+	case time.Saturday, time.Sunday:
+		fmt.Println("This is weekend.")
+	default:
+		fmt.Println("This is working day.")
+	}
+
+	// type switch
+	test := func(i any) { // intefcae{} == any
+		switch i.(type) {
+		case int:
+			fmt.Println("i is of type int")
+		case string:
+			fmt.Println("i is of type string")
+		case bool:
+			fmt.Println("i is of type bool")
+		case float64:
+			fmt.Println("i is of type float64")
+		default:
+			fmt.Println("i is of an unknown type")
+		}
+	}
+	test(true)
 
 	var loggedin bool = true
 	fmt.Println("User logged in:", !loggedin)
