@@ -123,4 +123,9 @@ func main() {
 	)
 	fmt.Println("PORT:" ,port, "HOST:", host)
 
+	// 2d array
+	matrix := [2][2]int{{2,3},{4,1}}
+	matrix[1][1] = 10
+	fmt.Println(matrix)
+
 }
