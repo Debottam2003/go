@@ -23,7 +23,5 @@ func main() {
 	n2 := math.Floor(3.2)
 	n3 := math.Ceil(3.1)
 	n4 := math.Pow(2, 3)
-	n5 := math.IsNaN(9)
-	n6 := math.IsNaN(1.34)
-	fmt.Println(n1, n2, n3, n4, n5, n6)
+	fmt.Println(n1, n2, n3, n4)
 }
