@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/rand"
 	"time"
 )
 
@@ -24,4 +25,10 @@ func main() {
 	n3 := math.Ceil(3.1)
 	n4 := math.Pow(2, 3)
 	fmt.Println(n1, n2, n3, n4)
+	// rand.Seed(time.Now().UnixNano())
+
+	// Generate a random number between 0 and 99
+	randomNumber := rand.Intn(100)
+
+	fmt.Println("Random number:", randomNumber)
 }
