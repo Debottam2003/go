@@ -102,4 +102,17 @@ func main() { // Entry point of the program
 	var age, marks int16 = 10, 15
 	age, marks = marks, age
 	fmt.Println(age, marks)
+	argus := []any{10, 9, "hello", 11}
+	var any_type_slice []any = []any{
+		int(1),
+		string("two"),
+		float64(3.33),
+		[]any{int(10), int(9), string("hello"), int(11)},
+		bool(true),
+		rune('#'),
+	}
+	fmt.Println("Contents of any_type_slice:", any_type_slice)
+	variadic(argus...)
+	m := []int32{4, 5, 6}
+	math(m...)
 }
