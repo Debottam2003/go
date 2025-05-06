@@ -7,7 +7,20 @@ import (
 type Car struct {
 	brand string
 	model string
-	year  int
+	year  int32
+}
+
+func newCar(brand string, model string, year int32) *Car {
+	car := Car{
+		brand: brand,
+		model: model,
+		year: year,
+	}
+	return &car
+}
+
+func (c *Car) setData(data int32) {
+	c.year = data
 }
 type Bmw struct {
 	Car   // embedding the Car struct
@@ -27,7 +40,7 @@ type Address struct {
 	city    string
 	state   string
 	country string
-	zip    uint64
+	zip     uint64
 }
 
 type userProfile struct {
@@ -66,13 +79,21 @@ func main() {
 	inf()
 	user1 := userProfile{
 		name: "deb kar",
-		age: 22,
+		age:  22,
 		address: Address{
-			city: "kolkata",
-			state: "west bengal",
+			city:    "kolkata",
+			state:   "west bengal",
 			country: "india",
-			zip: 700001,
+			zip:     700001,
 		},
 	}
 	fmt.Println(user1)
+	// var c100 Car = Car{
+	// 	brand: "bmw",
+	// 	model: "xuv",
+	// 	year:  2020,
+	// }
+	var c100 *Car = newCar("bmw", "xuv", 2020)
+	c100.setData(2025)
+	fmt.Println(*c100)
 }
