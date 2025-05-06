@@ -48,6 +48,7 @@ func main() {
 	}
 
 	// type switch
+	// anonymous function 
 	test := func(i any) { // intefcae{} == any
 		switch i.(type) {
 		case int:

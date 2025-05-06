@@ -44,4 +44,7 @@ func main() {
 	for name, grade := range studentGrades {
 		fmt.Printf("Name: %s, Grade: %d\n", name, grade)
 	}
+	for i := range 100 {
+		fmt.Println(i + 1)
+	}
 }
