@@ -47,4 +47,8 @@ func main() {
 	for i := range 100 {
 		fmt.Println(i + 1)
 	}
+	// characters stored as rune
+	for i, c := range "debottam" {
+		fmt.Printf("%d %c\n", i, c)
+	}
 }
