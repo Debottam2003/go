@@ -9,7 +9,7 @@ type Car struct {
 	model string
 	year  int32
 }
-
+// custom constructor
 func newCar(brand string, model string, year int32) *Car {
 	car := Car{
 		brand: brand,
