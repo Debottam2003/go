@@ -32,4 +32,9 @@ func inf() {
 	fmt.Println("Memory address of the shape interface", &s1)
 	fmt.Println(s1)
 	fmt.Println(*sptr)
+	if sq, ok := s1.(square); ok {
+		fmt.Println("Type assertion successful. Square:", sq)
+	} else {
+		fmt.Println("Type assertion failed.")
+	}
 }
