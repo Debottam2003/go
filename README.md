@@ -190,8 +190,9 @@ _
 # Data Structure (Array, Slice, Structure, Map) ✅
 # User Input ✅
 # Error Handling ✅
-# Structure and Interface
-# File Handling
-# Network
+# Structure and Interface ✅
 # Go Routine 
 # Channels 
+# File Handling
+# Network
+
