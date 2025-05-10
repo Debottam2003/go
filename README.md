@@ -191,7 +191,7 @@ _
 # User Input ✅
 # Error Handling ✅
 # Structure and Interface ✅
-# Go Routine 
+# Go Routine ✅
 # Channels 
 # File Handling
 # Network
