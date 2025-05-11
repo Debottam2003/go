@@ -16,6 +16,38 @@ type User struct {
 	Age      int    `json:"age"`
 }
 
+// type Header map[string][]string
+
+// type ResponseWriter interface {
+//     Header() Header
+//     Write([]byte) (n int, err error)
+//     WriteHeader(statusCode int)
+// }
+
+// type response struct {
+//     statusCode int                     // HTTP status code (e.g., 200, 404)
+//     header     map[string][]string     // Map holding headers: map[string][]string
+//     body       []byte                  // Body of the response
+// }
+
+// // Header returns the map of headers for the HTTP response.
+// func (r *response) Header() map[string][]string {
+//     if r.header == nil {
+//         r.header = make(map[string][]string)
+//     }
+//     return r.header
+// }
+
+// func (h Header) Set(key, value string) {
+//     h[key] = []string{value}
+// }
+
+// func (h Header) Add(key, value string) {
+//     h[key] = append(h[key], value)
+// }
+
+
+
 func handlerGet(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.Method)
 	fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
@@ -31,7 +63,8 @@ func handlerPost(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(u)
 	}
 	// w.Write([]byte("this is a post method"))
-	w.Header().Set("Content-Type", "application/json")
+	var m map[string][]string = w.Header()
+	m["Content-Type"] = []string{"application/json"}
 	res := Response{Message: "this is a post method", UserName: "Debottam Kar"}
 	err = json.NewEncoder(w).Encode(res)
 	if err != nil {
