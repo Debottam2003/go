@@ -193,7 +193,7 @@ _
 # Structure and Interface ✅
 # Go Routine ✅
 # Channels ✅
-# Mutexes
-# File Handling
+# Mutexes ✅
+# File Handling ✅
 # Network
 
