@@ -192,7 +192,8 @@ _
 # Error Handling ✅
 # Structure and Interface ✅
 # Go Routine ✅
-# Channels 
+# Channels ✅
+# Mutexes
 # File Handling
 # Network
 
