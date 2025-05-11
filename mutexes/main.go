@@ -7,7 +7,7 @@ import (
 
 type user struct {
 	views int
-	mu sync.Mutex
+	mu    sync.Mutex
 }
 
 // var mu sync.Mutex
