@@ -19,4 +19,5 @@ func Fetch(wg *sync.WaitGroup) {
 	}
 	stringData := string(data)
 	fmt.Println(stringData)
+	defer response.Body.Close()
 }
