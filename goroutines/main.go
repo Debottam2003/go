@@ -15,10 +15,15 @@ func task(id int, wg *sync.WaitGroup) {
 
 func main() {
 	var wg sync.WaitGroup
-	for i := 1; i <= 10; i++ {
-		wg.Add(1)
-		go task(i, &wg)
-	}
+	// for i := 1; i <= 10; i++ {
+	// 	wg.Add(1)
+	// 	go task(i, &wg)
+	// }
 	// time.Sleep(time.Second * 2)
+	wg.Add(4)
+	go Fetch(&wg)
+	go Fetch(&wg)
+	go Fetch(&wg)
+	go Fetch(&wg)
 	wg.Wait()
 }
