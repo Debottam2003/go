@@ -34,7 +34,7 @@ func InsertAtBegin(data int16) {
 	}
 }
 
-func Display() {
+func Display(Head *Node) {
 	var Temp *Node = Head
 	for Temp != nil {
 		fmt.Print(Temp.data, "->")
@@ -50,7 +50,9 @@ func main() {
 	InsertAtEnd(23)
 	InsertAtEnd(13)
 	InsertAtBegin(5)
-	Display()
+	Display(Head)
+	fmt.Println()
+	Do()
 }
 
 // Another example of a linked list implementation in Go
