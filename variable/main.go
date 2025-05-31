@@ -153,4 +153,16 @@ func main() {
 	sl2 := sl1[:]
 	fmt.Println(sl2)
 	fmt.Println(slices.Equal(sl1, sl2))
+
+	type Map map[string]interface{}
+	var jsonData map[string]interface{} = 
+		map[string]interface{} {
+			"name": "Debottam Kar",
+			"age": 22,
+			"address": map[string]interface{} {
+				"city": "Kolkata",
+				"state": "West bengal",
+			},
+		}
+	fmt.Println(jsonData)
 }
