@@ -48,9 +48,9 @@ type User struct {
 
 
 
-func handlerGet(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(r.Method)
-	fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
+var handlerGet = func (w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.Method, r.URL)
+	fmt.Fprintf(w, "Hello!, %s", r.URL)
 }
 
 func handlerPost(w http.ResponseWriter, r *http.Request) {
