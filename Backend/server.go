@@ -17,9 +17,11 @@ func main() {
 	fmt.Println("Server is running on port", port)
 	app.Get("/", func(c *fiber.Ctx) error {
 		//fmt.Println("Request came successfully in my first go backend...")
-		user := User{Name: "Debottam Kar", Age: 22}
+		// user := User{Name: "Debottam Kar", Age: 22}
 		// return c.SendString("Hello World!")
-		return c.JSON(user)
+		// return c.JSON(user)
+		// type Map map[string]interface{}
+		return c.JSON(&fiber.Map{"name": "deb kar"})
 	})
 	app.Listen(port)
 }
