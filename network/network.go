@@ -51,6 +51,12 @@ type User struct {
 var handlerGet = func (w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.Method, r.URL)
 	fmt.Fprintf(w, "Hello!, %s", r.URL)
+	data := map[string]interface{}{
+		"message":  "Hello from GET!",
+		"userName": "Debottam Kar",
+	}
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(data)
 }
 
 func handlerPost(w http.ResponseWriter, r *http.Request) {
