@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type User_Log struct {
-	Email    string `json:"email"`
-	Password string `json:"password"`
-}
-
 func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	password := "okudera"
 	// fmt.Println(r)
