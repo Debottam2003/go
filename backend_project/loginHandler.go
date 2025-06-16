@@ -34,7 +34,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	rows, err := Db.Query("SELECT * FROM users")
 	Error_Reaction(err)
 	fmt.Println(rows)
-	var users []Users // slice of structures (will hold the columns of the users table)
+	var users []Users // slice of structures (will hold the rows of the users table)
 	for rows.Next() {
 		var user Users
 		// scanning users data row by row one user at a time
