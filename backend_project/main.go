@@ -22,7 +22,8 @@ func main() {
 
 	router := http.NewServeMux()
 	router.HandleFunc("GET /home", HomeHandler)
-	router.HandleFunc("POST /login", LoginHandler)
+	router.HandleFunc("GET /login", LoginHandler)
+	router.HandleFunc("POST /write", HandleWrite);
 
 	fmt.Println("Server started running on port:", port)
 	DB_connect()
