@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 )
 
@@ -15,10 +14,10 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 
 	jr := Json_Response{Name: "debottam kar", Age: 22}
-	// Convert the json_response structure into json but in byte slice form []byte()
+	// Convert the Json_Response structure instance into json and returns a byte slice form []byte()
 	json_data, err := json.MarshalIndent(jr, "", "")
 	Error_Reaction(err)
-	fmt.Println(string(json_data))
+	// fmt.Println(string(json_data))
 
 	w.Write(json_data)
 }
