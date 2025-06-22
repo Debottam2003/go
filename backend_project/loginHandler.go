@@ -50,24 +50,24 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	rows.Close()
 	// converting the data into json but in byte slice form
-	users_data, err := json.MarshalIndent(users, "", " ")
-	if err != nil {
-		// http.Error(w, "Database error", http.StatusInternalServerError)
-		fmt.Println(err)
-		w.WriteHeader(500)
-		w.Write([]byte("Database error"))
-		return
-	}
+	// users_data, err := json.MarshalIndent(users, "", " ")
+	// if err != nil {
+	// 	// http.Error(w, "Database error", http.StatusInternalServerError)
+	// 	fmt.Println(err)
+	// 	w.WriteHeader(500)
+	// 	w.Write([]byte("Database error"))
+	// 	return
+	// }
 	// fmt.Println(string(users_data))
 
 	// WriteHeader writes the status code to the connection as part of an HTTP reply.
 	w.WriteHeader(http.StatusOK)
 	// Write writes the data to the connection as part of an HTTP reply.
-	w.Write(users_data)
+	// w.Write(users_data)
 
 	// Directly converts and writes the json data (structures or slice of structures)
-	// err = json.NewEncoder(w).Encode(users)
-	// if err != nil {
-	// 	http.Error(w, "Internal Server Error", 500)
-	// }
+	err = json.NewEncoder(w).Encode(users)
+	if err != nil {
+		http.Error(w, "Internal Server Error", 500)
+	}
 }
