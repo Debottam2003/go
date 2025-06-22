@@ -23,6 +23,9 @@ func DB_connect() {
 	Db, err = sql.Open("postgres", pg_url)
 	Error_Reaction(err)
 
+	Db.SetMaxOpenConns(100)
+	Db.SetMaxIdleConns(100)
+
 	err = Db.Ping()
 	Error_Reaction(err)
 	fmt.Println("✅ Connected to PostgreSQL")
