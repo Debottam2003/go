@@ -9,7 +9,7 @@ import (
 
 func Fetch(wg *sync.WaitGroup) {
 	defer wg.Done()
-	response, err := http.Get("http://localhost:5000")
+	response, err := http.Get("http://localhost:3333")
 	if err != nil {
 		panic(err)
 	}

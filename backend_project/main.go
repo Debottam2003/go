@@ -20,6 +20,8 @@ func main() {
 		port = ":" + port
 	}
 
+	// Because each request gets its own goroutine
+	// Concurrency out of the box
 	router := http.NewServeMux()
 	router.HandleFunc("GET /home", HomeHandler)
 	router.HandleFunc("GET /login", LoginHandler)
