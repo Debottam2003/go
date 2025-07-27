@@ -1,0 +1,7 @@
+In Go (Golang), if two files are in the same package, then:
+
+All unexported (lowercase) and exported (uppercase) identifiers (functions, types, variables, etc.) 
+are accessible to each other within that package.
+
+If the package is different then to use identifiers they has to be started with uppercase(exported)
+and also the package has to be imported. 
