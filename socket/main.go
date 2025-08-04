@@ -1,3 +1,5 @@
+// socket = ip + port
+
 package main
 
 import (
