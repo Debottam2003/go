@@ -65,25 +65,34 @@ func main() {
 	// fmt.Println(line)
 	// defer file.Close()
 	file, err = os.Open("text.txt")
-    nilErrorCheck(err)
-    defer file.Close()
+	nilErrorCheck(err)
+	defer file.Close()
 
-    reader := bufio.NewReader(file)
+	reader := bufio.NewReader(file)
 
-    fmt.Println("File contents:")
-    for {
-        line, err := reader.ReadBytes('\n')
-        if err != nil {
-            if err.Error() == "EOF" {
-                // Print the last line if not empty
-                if len(line) > 0 {
-                    fmt.Print(string(line))
-                }
-                break
-            }
-            fmt.Println("Read error:", err)
-            break
-        }
-        fmt.Print(string(line)) // Print each line
-    }
+	fmt.Println("File contents:")
+	for {
+		line, err := reader.ReadBytes('\n')
+		if err != nil {
+			if err.Error() == "EOF" {
+				// Print the last line if not empty
+				if len(line) > 0 {
+					fmt.Print(string(line))
+				}
+				break
+			}
+			fmt.Println("Read error:", err)
+			break
+		}
+		fmt.Print(string(line)) // Print each line
+	}
+
+	// data, err := os.ReadFile("example.txt")
+	// if err != nil {
+	// 	fmt.Println("Error reading file:", err)
+	// 	return
+	// }
+
+	// fmt.Println(string(data))
+
 }

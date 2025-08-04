@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
 )
 
@@ -46,9 +47,7 @@ type User struct {
 //     h[key] = append(h[key], value)
 // }
 
-
-
-var handlerGet = func (w http.ResponseWriter, r *http.Request) {
+var handlerGet = func(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.Method, r.URL)
 	fmt.Fprintf(w, "Hello!, %s", r.URL)
 	data := map[string]interface{}{
@@ -96,6 +95,18 @@ func main() {
 	// body, _ := io.ReadAll(resp.Body)
 	// fmt.Println(body)
 	// fmt.Println(string(body))
+
+	// Fetching Data (Client Side)
+	resp, err := http.Get("https://debottamapi.onrender.com/debottamapi/nepal")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(*resp)
+	fmt.Println(resp.Status)
+	defer resp.Body.Close()
+	body, _ := io.ReadAll(resp.Body)
+	fmt.Println(body)
+	fmt.Println(string(body))
 
 	router := http.NewServeMux()
 	router.HandleFunc("GET /", handlerGet)
