@@ -22,7 +22,7 @@ func main() {
 	db.DB_connection()
 	router := http.NewServeMux()
 	router.HandleFunc("GET /", handlers.HomeHandler)
-	// router.HandleFunc("POST /login", LoginHandler)
+	router.HandleFunc("POST /login", handlers.LoginHandler)
 
 	if router == nil {
 		log.Fatal("Can not start the server...")
