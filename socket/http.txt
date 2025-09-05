@@ -1,0 +1,6 @@
+TCP and HTTP
+------------
+i am live
+
+i = 105 (ascii) = 1 byte (8 bits birnary form) 01101001
+... rest of them 
