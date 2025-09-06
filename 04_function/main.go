@@ -32,11 +32,11 @@ func test() (int32, string) {
 	return 5, "deb"
 }
 
-func callback(fn func(int) (string, string)) {
+func callback(fn func(x int) (string, string)) {
 	fmt.Println(fn(5))
 }
 
-func returnFunction() func(int) string {
+func returnFunction() func(x int) string {
 	return func(x int) string {
 		fmt.Println("Return Function:", x)
 		return "Done"
