@@ -6,7 +6,7 @@ import (
 	"io"
 	"log"
 	"net"
-	// "os"
+	"os"
 	// "sync"
 )
 
@@ -52,10 +52,14 @@ func getLinesChannel(conn io.ReadWriteCloser) <-chan string {
 func main() {
 	fmt.Println("HTTP form TCP")
 	// fmt.Println("I hope I get the job!")
-	// f, err := os.Open("message.txt")
-	// NilErrorCheck(err)
-	// defer f.Close()
-
+	f, err := os.Open("test.txt")
+	NilErrorCheck(err)
+	defer f.Close()
+	// Read Mode so can't write
+	// _, err = f.WriteString("hello world")
+	// if err != nil {
+	// 	fmt.Println(err)
+	// }
 	// Read 8 bytes at a time
 	// for {
 	// 	data := make([]byte, 8)
