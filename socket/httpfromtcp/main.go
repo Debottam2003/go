@@ -61,14 +61,18 @@ func main() {
 	// 	fmt.Println(err)
 	// }
 	// Read 8 bytes at a time
+	// data := make([]byte, 8)
 	// for {
-	// 	data := make([]byte, 8)
 	// 	n, err := f.Read(data)
-	// 	if err != nil {
-	// 		// log.Fatal("error", err)
-	// 		break
+	// 	if n > 0 {
+	// 		fmt.Println(string(data[:n])) // always handle valid bytes
 	// 	}
-	// 	fmt.Println(string(data[:n]))
+	// 	if err == io.EOF {
+	// 		break // reached end of file
+	// 	}
+	// 	if err != nil {
+	// 		log.Fatal("read error:", err)
+	// 	}
 	// }
 
 	// f.Seek(0, 0)
