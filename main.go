@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func main2() {
 	// var name string
 	// var city string
 	// fmt.Scan(&age) // do not consumes the white spaces
