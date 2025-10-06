@@ -104,6 +104,9 @@ func main() {
 	// Removing the element at index 1 (banana)
 	Fruits = append(Fruits[:1], Fruits[2:]...)
 	fmt.Println("This is a slice after deletion:", Fruits)
+	Fruits3 := append([]string{"mango"}, Fruits...)
+	fmt.Println("This is a new slice:", Fruits3)
+	fmt.Println("This is a new slice:", Fruits)
 
 	// var newArr []string = Fruits[:]
 	// newArr := make([]string, len(Fruits))
