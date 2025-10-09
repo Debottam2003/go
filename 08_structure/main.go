@@ -53,6 +53,7 @@ func main() {
 	Display(Head)
 	fmt.Println()
 	Do()
+	Embade()
 }
 
 // Another example of a linked list implementation in Go
