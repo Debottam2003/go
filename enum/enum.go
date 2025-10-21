@@ -10,6 +10,12 @@ import "fmt"
 // 	Delayed status = "delayed"
 // )
 
+const (
+	Received1 string = "Received"
+	Pending1  string = "Pending"
+	Delayed1  string = "Delayed"
+)
+
 type Status int
 
 const (
@@ -26,8 +32,8 @@ func (s Status) String() string {
 	return names[s]
 }
 
-
 func main() {
 	var s Status = Received
 	fmt.Println(s.String())
+	fmt.Println(Received1)
 }
