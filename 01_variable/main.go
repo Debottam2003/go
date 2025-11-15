@@ -160,14 +160,17 @@ func main() {
 	fmt.Println(sl2)
 	fmt.Println(slices.Equal(sl1, sl2))
 
-	type Map map[string]interface{}
+	type Map map[string]any
 	var jsonData map[string]interface{} = map[string]interface{}{
 		"name": "Debottam Kar",
 		"age":  22,
-		"address": map[string]interface{}{
+		"address": Map{
 			"city":  "Kolkata",
 			"state": "West bengal",
 		},
 	}
 	fmt.Println(jsonData)
+
+	fmt.Println([]byte("debottam kar is op."))
+	fmt.Println(string([]byte("debottam kar is op.")))
 }
