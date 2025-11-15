@@ -47,10 +47,13 @@ func main() {
 	var char3 rune = 'অ'
 	char4 := '🙂' // warlus operator
 	fmt.Println("These are runes:", char1, char2, char3, char4)
+	fmt.Printf("These are runes:%c\n", char2)
 
 	// Byte type (Alias for uint8)
 	var char5 byte = 'A'
 	fmt.Println("This is a byte:", char5)
+	fmt.Printf("This is a byte: %d", char5)
+	fmt.Printf("\nThis is a byte: %c\n", char5)
 
 	// Complex types
 	var m complex64 = 1 + 2i
