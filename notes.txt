@@ -1,0 +1,19 @@
+var n int = 10;
+
+int → data type
+
+n → identifier (variable name)
+
+10 → literal constant (specifically, an integer literal)
+
+So 10 is a constant value written directly in the code.
+
+literal
+
+untyped int constant 2
+untyped float constant 3.5
+untyped complex constant 4+5i
+untyped string constant "hello"
+untyped bool constant true
+
+when these are assigned to a variable/constant they gets a type
