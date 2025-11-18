@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/Debottam2003/my_go_app/inner"
 	"math"
 	"math/rand"
 	"time"
@@ -30,12 +31,12 @@ func main() {
 
 	fmt.Println(str)
 
-	for i := 0; i < len(str); i++ {
-		fmt.Print(string(str[i]))
-		time.Sleep(time.Second)
-	}
+	// for i := 0; i < len(str); i++ {
+	// 	fmt.Print(string(str[i]))
+	// 	time.Sleep(time.Second)
+	// }
 
-	fmt.Println()
+	// fmt.Println()
 
 	// Time package features
 	n1 := math.Abs(-3)
@@ -49,4 +50,7 @@ func main() {
 	randomNumber := rand.Intn(100)
 
 	fmt.Println("Random number:", randomNumber)
+
+	inner.Utils()
+
 }
