@@ -21,9 +21,9 @@ type NewProfile struct {
 }
 
 func Embade() {
-	user1 := User{"deb", 22}
+	user1 := User{Name: "deb", Age: 22}
 	fmt.Println(user1)
-	profile1 := Profile{UserData: User{"deb", 22}, Img: "http://localhost:3333/images/deb.png"}
+	profile1 := Profile{UserData: User{Name: "deb", Age: 22}, Img: "http://localhost:3333/images/deb.png"}
 	fmt.Println(profile1)
 	fmt.Println(profile1.UserData.Name) // correct
 	// fmt.Println(profile1.Name)// wrong
